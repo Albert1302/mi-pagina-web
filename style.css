@@ -166,3 +166,56 @@ p {
         display: none;
     }
 }
+@media (max-width: 768px) {
+    .title {
+        margin-bottom: 10px;
+        font-size: 40px;
+    }
+
+    .sau {
+        height: auto; 
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .header {
+        height: 40vh;
+    }
+
+    p {
+        padding: 0 20px; 
+    }
+
+    .box-container {
+        flex-direction: column; 
+    }
+
+    .box-container .box {
+        margin: 1rem 0; 
+        width: 100%; 
+    }
+}
+@media (max-width: 480px) {
+    .title {
+        font-size: 30px; 
+    }
+
+    .header {
+        height: 30vh; 
+    }
+
+    .btn {
+        padding: 8px 20px; 
+        font-size: 14px;
+    }
+
+    .box-container .box {
+        width: 90%; 
+    }
+
+    p {
+        font-size: 14px; 
+    }
+}
