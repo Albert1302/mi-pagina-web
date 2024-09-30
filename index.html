@@ -6,8 +6,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Mi Pagina Web</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
+    <!-- SECCION DE ENCABEZADO-->
     <div class ="head"> 
         
         <div class="logo">
@@ -15,16 +21,16 @@
         </div>
         
         <nav class="navbar">
-            <a href="#">Presentacion</a>
-            <a href="#">Acerca de mi</a>            
-            <a href="#">contactos</a>
-            <a href="#">Informacion</a>
-            <a href="#">El temach mi pastor</a>
+            <a href="#presentacion">Presentacion</a>
+            <a href="#proyectos">PROYECTOS Y EXPERIENCIA</a>            
+            <a href="#acerca">ACERCA DE MI</a>
+            <a href="#trabajo">TRABAJO</a>
+            <a href="#contactos">CONTACTOS</a>
             </nav>
     
     </div>
-
-    <header class ="content header">
+<!-- SECCION DE PRESENTACION-->
+    <header id="presentacion" class ="content header">
         <h2 class ="title">Presentacion</h2>
         <p>
             Mi nombre es Jose Albert Yucra Calderon<br />
@@ -38,8 +44,8 @@
             <a href="#" class ="btn">SOY</a>
         </div>
     </header>
-
-    <section class="content sau">
+<!-- SECCION DE PROYECTOS-->
+    <section id="proyectos" class="content sau">
         <h2 class="title">PROYECTOS Y EXPERIENCIA</h2> 
         <p> ESTE ES MI GITHUB: <a href="https://github.com/Albert1302">https://github.com/Albert1302</a><br/>
             tengo algunos proyectos que hice y otros que estan en desarrollo <br /> 
@@ -64,10 +70,9 @@
                 <p> LENGUAJE QUE ME GUSTA POR LO SENCILLO QUE ES </p>
             </div>    
         </div>
-    
     </section>
-    
-    <section class="content about" >
+    <!--SECCION DE ACERCA DE MI -->
+    <section id="acerca" class="content about" >
         <h2 class="title">ACERCA DE MI</h2>
         <p>  Soy una persona que le gustar jugar video juegos coomo counter Strike,Dota tambien tengo otros hobbies como jugar Wally, futsal <br />
             participar en carreras pedestres,ir al Gym,aprender a tocar guitarra,cantar,cocinar, hacer reposteria,aprender nuevas cosas, mi bebida <br/>
@@ -75,34 +80,46 @@
         </p>
         <a href="#" class="btn">SABER MENOS</a>
     </section>
-
-    <section class="content price">
+<!--SECCION DE TRABAJO -->
+    <section id="trabajo" class="content price">
         <article class="contain">
             <h2 class="title">TRABAJO</h2>
             <p>Por el momento no trabajo como desarrollador
             </p>
             <figure>
-                <img src="img/Catacoraaaaa!!!.gif" height="250px" width="50%" alt="mapa">
+                <img src="img/Catacoraaaaa!!!.gif" height="220px" width="50%" alt="mapa">
             </figure>
             <a href="#" class="btn">Catacoraaaaaa!!!</a>
     
         </article>
     
     </section>
-    
-    <section class="content contact">
+    <!-- SECCION DE CONTACTOS-->
+    <section id="contactos" class="content contact">
         <h2 class="title">CONTACTOS</h2>
         <p>
-            Celular: 74468131 <br/>
-            <i class="fab fa-whatsapp"></i>whatsapp: 74468131 <br/>
+            Celular: +591 74468131 <br/>
+            <i class="fab fa-whatsapp"></i>whatsapp: +591 74468131 <br/>
             <i class="fab fa-facebook"></i>Facebook: Jose Albert Yucra Calderon <br/>
             <i class="fab fa-github"></i>github: <a href="https://github.com/Albert1302">https://github.com/Albert1302</a><br/>
 
         </p>
         <figure>
-            <img src="img/kawai.gif" height="220px" width="100%" alt="mapa">
+            <img src="img/kawai.gif" height="200px" width="100%" alt="mapa">
         </figure>
     </section>
-
+<!-- CODIGOD DE JAVASCRIPT-->
+<script>
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+</script>
 </body>
 </html>
